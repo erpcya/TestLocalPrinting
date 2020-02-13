@@ -7,7 +7,7 @@ Use this source code for send a document directly to printer from external serve
 Just run it like is showed:
 
 <pre>
-./test-print <FileName> <AD_AppRegistration_ID>
+./test-print [FileName] [AD_AppRegistration_ID]
 </pre>
 
 - **FileName**: Path of file to send
