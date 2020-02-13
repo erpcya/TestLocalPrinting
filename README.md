@@ -10,7 +10,9 @@ Just run it like is showed:
 ./test-print <FileName> <AD_AppRegistration_ID>
 </pre>
 
-- FileName: Path of file to send
-- AD_AppRegistration_ID: ID of App registration for get config
+- **FileName**: Path of file to send
+- **AD_AppRegistration_ID**: ID of App registration for get config
+
+For run it note that you need a Adempiere.properties file in the same folder that **test-print.sh** or **test-print.bat**
 
 Note: Server / Producer is not here!!! You can implement like is showed from official ActiveMQ for java: http://activemq.apache.org/hello-world.html
