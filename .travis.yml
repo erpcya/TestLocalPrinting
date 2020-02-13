@@ -9,6 +9,11 @@ addons:
   apt:
     packages:
       gradle
+before_script:
+  - mkdir dependences
+  - wget https://github.com/erpcya/adempiere/releases/download/3.9.3-rs-1.1/Adempiere_393LTS.tar.gz  -c -O Adempiere.tar.gz
+  - tar -xzf Adempiere.tar.gz
+  - mv Adempiere/lib/*.jar dependences/
 jobs:
   include:
     - stage: Compilation
@@ -19,8 +24,8 @@ deploy:
   provider: releases
   api_key: $GITHUB_TOKEN_KEY
   file: 
-    - "$TRAVIS_BUILD_DIR/build/distributions/LocalPrinting.zip"
-    - "$TRAVIS_BUILD_DIR/build/distributions/LocalPrinting.tar"
+    - "$TRAVIS_BUILD_DIR/build/distributions/TestLocalPrinting.zip"
+    - "$TRAVIS_BUILD_DIR/build/distributions/TestLocalPrinting.tar"
   skip_cleanup: true
   on:
     tags: true
